@@ -1,0 +1,51 @@
+.cd-primary-nav
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 100%
+  padding 80px 5%
+  z-index 3
+  background $primary-color
+  overflow auto
+  -webkit-overflow-scrolling touch
+  visibility hidden
+  opacity 0
+  transition visibility 0s opacity .3s
+
+  & li
+    margin 1.6em 0
+    text-align center
+
+    @media $tablet
+      margin 2em 0
+    @media $desktop
+      margin 2.6em 0
+
+  & a
+    color $gray-dark
+    font-size 20px
+    font-size 1.25rem
+    font-family $montserrat
+    text-transform uppercase
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    transition color .2s
+
+    @media $tablet
+      font-size 24px
+      font-size 1.5rem
+    @media $laptop
+      font-size 28px
+      font-size 1.75rem
+    @media $desktop
+      font-size 32px
+      font-size 2rem
+
+  &.fade-in
+    visibility visible
+    opacity 1
+    transition opacity .3s ease-in
+
+.no-touch .cd-primary-nav a:hover
+  color #fff

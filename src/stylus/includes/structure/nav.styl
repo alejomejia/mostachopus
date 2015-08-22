@@ -1,0 +1,141 @@
+.cd-nav-trigger
+  position fixed
+  display inline-block
+  top 18px
+  right 5%
+  width 44px
+  height 44px
+  z-index 5
+  overflow hidden
+  text-indent 100%
+  white-space nowrap
+
+  // .cd-nav-trigger::before, .cd-nav-trigger::after
+  &::before,
+  &::after
+    position absolute
+    top 0
+    left 0
+    border-radius 50%
+    width 100%
+    height 100%
+    transform translateZ(0)
+    backface-visibility hidden
+    transition-property transform
+
+  &::before
+    background $primary-color
+    transform scale(1)
+    transition-duration .3s
+    transition-delay .4s
+  &::after
+    background $gray-dark
+    transform scale(0)
+    transition-duration 0s
+    transition-delay 0s
+
+  // .cd-nav-trigger .cd-icon
+
+  & .cd-icon
+    position absolute
+    left 50%
+    top 50%
+    bottom auto
+    right auto
+    transform translateX(-50%) translateY(-50%)
+    display inline-block
+    width 18px
+    height 3px
+    background #fff
+    z-index 10
+
+    &::before,
+    &::after
+      position absolute
+      top 0
+      right 0
+      width 100%
+      height 100%
+      background #fff
+      transform translateZ(0)
+      backface-visibility hidden
+      transition transform .3s
+
+    &::before
+      transform translateY(-6px) rotate(0deg)
+    &::after
+      transform translateY(6px) rotate(0deg)
+
+  // .cd-nav-trigger .close-nav
+  &.close-nav
+
+    &::before
+      transform scale(0)
+    &::after
+      transform scale(1)
+      transition-duration .3s
+      transition-delay .4s
+
+    // .cd-nav-trigger .close-nav .cd-icon
+    & .cd-icon
+      background rgba(255,255,255,0)
+
+      &::before,
+      &::after
+        background $white
+
+      &::before
+        transform translateY(0) rotate(45deg)
+      &::after
+        transform translateY(0) rotate(-45deg)
+
+.cd-nav-trigger.cd-icon::before
+  transform translateY(-6px) rotate(0deg)
+
+.cd-nav-trigger.cd-icon::after
+  transform translateY(6px) rotate(0deg)
+
+.cd-overlay-nav,
+.cd-overlay-content
+  position fixed
+  top 18px
+  right 5%
+  width 4px
+  height 4px
+  transform translateX(-20px) translateY(20px)
+
+.cd-overlay-nav span,
+.cd-overlay-content span
+  display inline-block
+  position absolute
+  border-radius 50%
+  transform translateZ(0)
+  backface-visibility hidden
+  will-change transform
+  transform-origin 50% 50%
+  transform scale(0)
+
+.cd-overlay-nav.is-hidden,
+.cd-overlay-content.is-hidden
+  opacity 0
+  visibility hidden
+  transition opacity .3s 0s, visibility 0s .3s
+
+.cd-overlay-nav
+  z-index 2
+
+  & span
+    background $primary-color
+
+.cd-overlay-content
+  z-index 4
+
+  & span
+    background $gray-dark
+
+.cd-content
+  padding 80px 0
+  width 90%
+  max-width 768px
+  margin 0 auto
+  z-index 1

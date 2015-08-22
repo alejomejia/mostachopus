@@ -4,7 +4,11 @@ html(lang="es")
   head
     include ./includes/head.jade
   body
-    h1=site.name
-    h2=site.slogan
-    include ./includes/structure/topnav.jade
+  
+    include ./includes/structure/menu-items.jade
+    
+    main.cd-content
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis at voluptate libero delectus saepe quaerat facilis placeat eum vel, ipsum totam cupiditate sit nemo tempora illo molestias nostrum numquam fuga?
+
+    include ./includes/structure/nav.jade
     include ./includes/footer-scripts.jade
