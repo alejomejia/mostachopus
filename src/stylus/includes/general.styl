@@ -39,17 +39,6 @@ h6
 
 h1
 
-  font-size 3em
-
-  @media $laptop
-    font-size 2.7em
-  @media $tablet
-    font-size 2.4em
-  @media $phone
-    font-size 2.1em
-
-h2
-
   font-size 2.5em
 
   @media $laptop
@@ -58,6 +47,17 @@ h2
     font-size 1.9em
   @media $phone
     font-size 1.6em
+
+h2
+
+  font-size 2em
+
+  @media $laptop
+    font-size 1.7em
+  @media $tablet
+    font-size 1.4em
+  @media $phone
+    font-size 1.1em
 
 /* Paragraphs */
 
@@ -79,6 +79,14 @@ a
   color $primary-color
 
 a,
-a:hover
+a:hover,
+a:link,
+a:visited,
+a:active
 
+  outline none
   text-decoration none
+
+*:focus
+
+  outline none

@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+
 	// Menu animation
 	var overlayNav = $('.cd-overlay-nav'),
 		overlayContent = $('.cd-overlay-content'),
@@ -84,6 +85,9 @@ jQuery(document).ready(function($){
 		}, 0);
 	}
 
-	// Other funcionalities
+	// -------- End Menu animation //
+
+	// -------- Init WOW.js to css animations on scroll ----------- //
+	new WOW().init();
 
 });
