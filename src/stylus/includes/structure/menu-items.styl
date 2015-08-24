@@ -25,14 +25,13 @@
       margin 2.6em 0
 
   & a
-    color $gray-dark
+    color $secondary-color-dark
     font-size 20px
     font-size 1.25rem
     font-family $sans
     text-transform uppercase
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
-    transition color .2s
 
     @media $tablet
       font-size 24px
@@ -43,6 +42,9 @@
     @media $desktop
       font-size 32px
       font-size 2rem
+
+    &:hover
+      color $secondary-color-light
 
   &.fade-in
     visibility visible
