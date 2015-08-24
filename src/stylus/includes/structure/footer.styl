@@ -1,0 +1,54 @@
+footer
+
+  width auto
+  padding $gutter-tb-m
+  background $secondary-color
+
+  .logo
+
+    width 120px
+    height 120px
+    margin 0 auto 2em auto
+
+    img
+
+      width 120px
+      height 120px
+
+  .footer-links
+
+    width 30%
+    margin 0 auto
+
+    @media $laptop
+      width 35%
+    @media $tablet
+      width 50%
+    @media $phone
+      width 65%
+
+
+    li
+
+      float left
+      display block
+      text-align center
+      width 33.3%
+
+      @media $phone
+
+        width 100%
+        float none
+
+      &:nth-child(even):before,
+      &:nth-child(even):after
+
+        content ' x '
+        font-family $sans
+        color $secondary-color-light
+        margin $gutter-lr-s
+
+        @media $phone
+
+          display block
+          float none
