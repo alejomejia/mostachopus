@@ -17,13 +17,13 @@ footer
 
   .footer-links
 
-    width 30%
+    width 40%
     margin 0 auto
 
     @media $laptop
-      width 35%
-    @media $tablet
       width 50%
+    @media $tablet
+      width 60%
     @media $phone
       width 65%
 
@@ -38,6 +38,20 @@ footer
 
         width 100%
         float none
+
+      &:first-child
+
+        text-align right
+
+        @media $phone
+          text-align center
+
+      &:last-child
+
+        text-align left
+
+        @media $phone
+          text-align center
 
       &:nth-child(even):before,
       &:nth-child(even):after
