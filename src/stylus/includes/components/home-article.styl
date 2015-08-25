@@ -8,18 +8,6 @@
 	margin 0 auto
 	max-width 1020px
 
-	.img
-		position relative
-	.text
-		position absolute
-		color $white
-		left 2.5%
-		bottom 2.5%
-		width 95%
-		text-shadow 1px 1px 1px $gray-dark
-		h3
-			font-size 1.8em
-
 	&__item
 		width 100%
 
@@ -33,6 +21,21 @@
 
 			&--border .tilt
 				overflow visible
+
+&.img
+	position relative
+
+	.text
+		position absolute
+		color $white
+		left 2.5%
+		bottom 2.5%
+		width 95%
+		text-shadow 1px 1px 1px $gray-dark
+		h3
+			font-size 1.8em
+	.avatar
+							position absolute
 
 /* Examples custom styles */
 .grid--examples
