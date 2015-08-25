@@ -8,64 +8,45 @@
 	margin 0 auto
 	max-width 1020px
 
+	.img
+		position relative
+	.text
+		position absolute
+		color $white
+		left 2.5%
+		bottom 2.5%
+		width 95%
+		text-shadow 1px 1px 1px $gray-dark
+		h3
+			font-size 1.8em
 
-.grid__item
-	width 100%
+	&__item
+		width 100%
 
+		.grid__img img
+			max-width 100%
+			display block
 
-.grid--xray .grid__item
-	margin 0 20px 20px
-	width 300px
+			&--border .tilt__back,
+			&__img--border .tilt__front
+				border 1px solid #333
 
-
-.grid__item-title
-	font-family 'Playfair Display', Georgia, serif
-	font-size 1em
-	padding 1em 0
-	font-weight bold
-
-
-.grid__item-title code
-	color #aaa
-	font-weight normal
-	font-size 0.85em
-
-
-.grid--xray .grid__img
-	width 300px
-	height 300px
-
-
-.grid__img img
-	max-width 100%
-	display block
-
-
-.grid__img--border .tilt__back,
-.grid__img--border .tilt__front
-	border 1px solid #333
-
-
-.grid__img--border .tilt
-	overflow visible
-
+			&--border .tilt
+				overflow visible
 
 /* Examples custom styles */
 .grid--examples
 	max-width 830px
 
+	& .grid__img
+		position relative
+		height 0
+		padding-bottom 66.714%
+		overflow hidden
 
-.grid--examples .grid__img
-	position relative
-	height 0
-	padding-bottom 66.714%
-	overflow hidden
-
-
-.grid--examples .tilt
-	position absolute
-	top 0
-
+	& .tilt
+		position absolute
+		top 0
 
 .grid__img--example-2after
 	content ''
@@ -76,7 +57,6 @@
 	height 100%
 	top 0
 	left 0
-
 
 .grid__img--example-3 .tilt
 	-webkit-filter grayscale(100%) brightness(105%) contrast(120%)
